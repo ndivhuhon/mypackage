@@ -6,7 +6,7 @@ def sum_array(array):
 
 def fibonacci(n):
     if n<0: 
-        print("Wrong input") 
+        return ("Wrong input") 
     # First Fibonacci number is 0 
     elif n==1: 
         return 0
