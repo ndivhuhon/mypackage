@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: mypackage
+Version: 0.1
+Summary: This library helps to publish functions for recursion and sorting
+Home-page: https://github.com/ndivhuhon/mypackage
+Author: Ndivhuho
+Author-email: ndivhuhon@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
