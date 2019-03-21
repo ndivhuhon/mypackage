@@ -7,18 +7,34 @@ def bubble_sort(items):
                 items[j+1] = temp
                 return items
 
-def merge_sort(items):
-    if len(items) < 2:return items
+def merge(left, right):
+  
+    left_index, right_index = 0, 0
+    result = []
+    while left_index < len(left) and right_index < len(right):
+        if left[left_index] < right[right_index]:
+            result.append(left[left_index])
+            left_index += 1
+        else:
+            result.append(right[right_index])
+            right_index += 1
 
-    result,mid = [],int(len(items)/2)
-    y = merge_sort(items[:mid])
-    z = merge_sort(items[mid:])
-
-    while (len(y) > 0) and (len(z) > 0):
-        if y[0] > z[0]:result.append(z.pop(0))
-        else: result.append(y.pop(0))
-        result.extend(y+z)
+    result += left[left_index:]
+    result += right[right_index:]
     return result
+
+
+def merge_sort(items):
+    
+    if len(items) <= 1:  # base case
+        return items
+
+    # divide array in half and merge sort recursively
+    half = len(items) // 2
+    left = merge_sort(items[:half])
+    right = merge_sort(items[half:])
+
+    return merge(left, right)
 
 def quick_sort(items):
     if (len(items) < 2):
