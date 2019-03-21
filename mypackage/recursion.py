@@ -5,16 +5,9 @@ def sum_array(array):
         return array[0]+sum_array(array[1:])
 
 def fibonacci(n):
-    if n<0: 
-        return ("Wrong input") 
-    # First Fibonacci number is 0 
-    elif n==1: 
-        return 0
-    # Second Fibonacci number is 1 
-    elif n==2: 
-        return 1
-    else: 
-        return fibonacci(n-1)+fibonacci(n-2)
+    if n == 0: return 0
+    elif n == 1: return 1
+    else: return fibonacci(n-1)+fibonacci(n-2)
 
 def factorial(n):
     if n == 0:
