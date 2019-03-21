@@ -1,11 +1,17 @@
 def bubble_sort(items):
-    for i in range(len(items)-1,0,-1):
-        for j in range(i):
-            if items[j] > items[j+1]:
-                temp = items[j]
-                items[j] = items[j+1]
-                items[j+1] = temp
-                return items
+    count = 0
+    
+    for idx in range(len(items)-1):
+        if items[idx] > items[idx + 1]:
+            items[idx],items[idx + 1] = items[idx + 1],items[idx]
+            count += 1
+            
+    if count == 0:
+        
+        return items
+    else:
+        
+        return bubbleSort(items)
 
 def merge(left, right):
   
