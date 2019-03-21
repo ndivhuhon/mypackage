@@ -4,7 +4,7 @@ def sum_array(array):
     else:
         return array[0]+sum_array(array[1:])
 
-def Fibonacci(n):
+def fibonacci(n):
     if n<0: 
         print("Wrong input") 
     # First Fibonacci number is 0 
@@ -14,7 +14,7 @@ def Fibonacci(n):
     elif n==2: 
         return 1
     else: 
-        return Fibonacci(n-1)+Fibonacci(n-2)
+        return fibonacci(n-1)+fibonacci(n-2)
 
 def factorial(n):
     if n == 0:
